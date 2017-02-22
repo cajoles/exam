@@ -1,0 +1,20 @@
+<% include ./partials/header %>
+<h1>Welcome to Diamond Rent A Car service</h1>
+<p>below are the list of avaible vehicles:</p>
+<table>
+<tr>
+<th>BRAND</th>
+<th>NAME</th>
+
+</tr>
+<% vehicle.forEach(function(ride){ %>
+<tr>
+	<td><%= ride.brand %></td>
+	<td><a href="/vehicle/<%= ride._id %>"><%= ride.name %></a></td>
+
+</tr>
+<% }); %>
+</ul>
+<a href="/vehicle/new">Add New vehicle to the list</a>
+<% include ./partials/footer %>
+
